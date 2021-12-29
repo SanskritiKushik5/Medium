@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodemailer📧</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/journal/bootstrap.min.css">
+</head>
+<body style="background-color: black;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Nodemailer📧</a>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="row text-center mt-5">
+            <div class="col-xs-12 mt-5">
+                <h3 style="color: white;">Send a mail now!</h3>
+                <form action="/sendmail" method="post">
+                    <div class="form-group">
+                        <input type="email" class="form-control mt-4" name="email" id="email" id="inputDefault" placeholder="Email-id of receiver">
+                        <input type="text" class="form-control mt-4" name="name" id="name" id="inputDefault" placeholder="Name of receiver">
+                        <textarea name="msg" class="form-control mt-4" id="msg" cols="30" rows="6" placeholder="Enter you mail here!"></textarea>
+                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

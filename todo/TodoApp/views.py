@@ -26,3 +26,16 @@ def delete_todo(request, todo_id):
         todo_obj.delete() # Deleting the retrieved object
 
     return redirect('home')
+
+@csrf_exempt
+def edit_todo(request, todo_id):
+    todo_obj = ToDo.objects.get(pk=todo_id)
+
+    if request.method == 'POST':
+        todo_obj.todo_text = request.POST["todo_text"]
+        todo_obj.save()
+        return redirect('home')
+
+    template_name = 'edit.html'
+    context = {'todo_text': todo_obj.todo_text, 'todo_obj': todo_obj}
+    return render(request, template_name, context)

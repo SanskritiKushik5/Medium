@@ -16,6 +16,7 @@
 <body>
     <div class="justify-content-center text-center">
         <h3 class="mt-5">Create your ToDo now!</h3>
+        <br>
         <form action="/add_todo" method="POST">
             <input type="text" name="todo_text" placeholder="Add ToDo" style="margin: 0 3rem;">
             <button class="btn btn-primary" type="submit">Add ToDo</button>
@@ -35,6 +36,9 @@
                             <form method="POST" action="{% url 'delete_todo' todo.id %}">
                                 <button type="submit" class="mx-2 btn btn-danger">DELETE</button>
                             </form>
+                        </td>
+                        <td class="text-left">
+                            <a href="{% url 'edit_todo' todo.id %}" type="button" class="mx-2 btn btn-warning">EDIT</a>
                         </td>
                     </tr>
                     {% endfor %}

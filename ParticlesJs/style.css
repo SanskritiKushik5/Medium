@@ -1,0 +1,17 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	color: white;
+    font-family: sans-serif;
+}
+#particles-js {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background-color: black;
+}
+.particles-js-canvas-el {
+	position: absolute;
+}
